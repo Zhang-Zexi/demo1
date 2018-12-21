@@ -3,9 +3,6 @@ package com.zzx.demo.Map;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- *
- */
 public class ContainsKey {
 
     public static void main(String[] args) {
