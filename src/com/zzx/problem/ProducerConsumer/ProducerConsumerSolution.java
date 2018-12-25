@@ -1,4 +1,4 @@
-package com.zzx.problem;
+package com.zzx.problem.ProducerConsumer;
 
 import com.zzx.problem.ProducerConsumer.Consumer;
 import com.zzx.problem.ProducerConsumer.Producer;
