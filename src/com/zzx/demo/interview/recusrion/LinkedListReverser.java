@@ -22,17 +22,17 @@ public class LinkedListReverser {
         Node newHead = reverseLinkedList(head.getNext());
         head.getNext().setNext(head);
         head.setNext(null);
-        return newHead;
+          return newHead;
     }
 
     public static void main(String[] args) {
         LinkedListCreator creator = new LinkedListCreator();
         LinkedListReverser reverser = new LinkedListReverser();
 
-        Node.printLinkeList(reverser.reverseLinkedList(
-                creator.createdLinkedList(new ArrayList<>())));
-        Node.printLinkeList(reverser.reverseLinkedList(
-                creator.createdLinkedList(Arrays.asList(1))));
+//        Node.printLinkeList(reverser.reverseLinkedList(
+//                creator.createdLinkedList(new ArrayList<>())));
+//        Node.printLinkeList(reverser.reverseLinkedList(
+//                creator.createdLinkedList(Arrays.asList(1))));
         Node.printLinkeList(reverser.reverseLinkedList(
                 creator.createdLinkedList(Arrays.asList(1, 2, 3, 4, 5))));
     }
