@@ -1,4 +1,4 @@
-package com.zzx.demo.interview.oop;
+package com.zzx.demo.interview.oop.company;
 
 import com.zzx.demo.interview.oop.company.Employee;
 
