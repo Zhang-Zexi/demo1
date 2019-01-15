@@ -7,7 +7,14 @@ package com.zzx.demo.interview.oop.company;
  * @Date 2019/1/8 20:21
  * Version 1.0
  **/
-public class BankEndPoint {
-    public void payment(String name, int salary) {
+public abstract class BankEndPoint {
+
+    public abstract void payment(String name, int salary);
+
+    int accounNo;
+
+    void intialize(){
+        //..
     }
+
 }
