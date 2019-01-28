@@ -1,5 +1,8 @@
 package com.zzx.demo.interview.oop.company;
 
+import java.util.LinkedList;
+import java.util.Map;
+
 /**
  * @ClassName Tester
  * @Description
@@ -22,6 +25,21 @@ public class Tester {
         System.out.println("employee1.equals(employee3) ?" + (employee1.equals(employee3) ));
         System.out.println(employee2);
 
+        LinkedList<Employee> employees = new LinkedList<>();
+        employees.add(employee1);
+        employees.add(employee2);
+        employees.add(employee3);
 
+        System.out.println("Print using for each");
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
+
+        System.out.println("Testing managers");
+        Employee manager = new Manager("Tony", 100000);
+        employees.add(manager);
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
     }
 }
