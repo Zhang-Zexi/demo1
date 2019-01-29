@@ -1,6 +1,6 @@
 package com.zzx.demo.interview.oop.linkedlist;
 
-import com.zzx.demo.interview.recusrion.Node;
+import com.zzx.demo.interview.common.Node;
 
 import java.util.Iterator;
 

@@ -1,8 +1,7 @@
 package com.zzx.demo.interview.recusrion;
 
-import com.sun.scenario.effect.impl.state.LinearConvolveKernel;
+import com.zzx.demo.interview.common.Node;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
