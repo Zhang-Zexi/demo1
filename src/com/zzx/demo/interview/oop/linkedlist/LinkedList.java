@@ -3,6 +3,8 @@ package com.zzx.demo.interview.oop.linkedlist;
 import com.zzx.demo.interview.common.Node;
 
 import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * @ClassName LinkedList
@@ -13,11 +15,16 @@ import java.util.Iterator;
  **/
 public class LinkedList implements Iterable<Integer>{
 
-    Node head;
-    Node tail;
+    private Node head;
+    private Node tail;
+
+    public static LinkedList newEmptyList() {
+        return new LinkedList();
+    }
 
     public LinkedList() {
         head = null;
+        tail = null;
     }
 
     public void add(int value) {
@@ -30,17 +37,31 @@ public class LinkedList implements Iterable<Integer>{
         tail = node;
     }
 
-//    class ListIterator implements Iterable<Integer> {
-//
-//        @Override
-//        public boolean hasNext() {
-//            return  false;
-//        }
-//        @Override
-//        public Iterator next() {
-//            return null;
-//        }
-//    }
+    private class ListIterator implements Iterable<Integer> {
+        private Node currenntNode;
+
+        public ListIterator(Node head) {
+            currenntNode = head;
+        }
+
+        public boolean hasNext() {
+            return currenntNode != null;
+        }
+
+        public Integer next() {
+            if (currenntNode == null) {
+                throw new NoSuchElementException();
+            }
+            int value = currenntNode.getValue();
+            currenntNode = currenntNode.getNext();
+            return value;
+        }
+
+        @Override
+        public Iterator<Integer> iterator() {
+            return (Iterator<Integer>) new ListIterator(head);
+        }
+    }
 
 
 
