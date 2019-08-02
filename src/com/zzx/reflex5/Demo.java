@@ -24,8 +24,10 @@ public class Demo {
     private static String getValue(String key) throws IOException {
         String root = System.getProperty("user.dir");
         String FileName = "pro.txt";
-        String filePath = root + File.separator +"src" + File.separator + FileName;
-//        String filePath = "D:\\02-DemoWorkSpace\\06-Demo\\demo1\\src\\pro.txt";
+        String filePath = root + File.separator +"src" + File.separator
+                + "com" + File.separator + "zzx" + File.separator
+                + "reflex5" + File.separator + FileName;
+//        String filePath = "D:\02-DemoWorkSpace\06-Demo\demo1\src\com\zzx\reflex5\pro.txt";
         Properties pro = new Properties();//获取配置文件的对象
         FileReader in = new FileReader(filePath);// 获取输入流
         pro.load(in);// 讲流加载到配置文件中
