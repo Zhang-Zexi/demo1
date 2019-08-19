@@ -16,7 +16,7 @@ public class Demo01 {
 //        System.arraycopy(arr, 0, copied, 1, 5);
 //        System.out.println(Arrays.toString(copied));
 
-//        int[] copied = Arrays.copyOf(arr, 10);
+//        int[] copied = Arrays.copyOf(arr, 10);2
 //        System.out.println(Arrays.toString(copied));
         int[] copied = Arrays.copyOf(arr,3);
         System.out.println(Arrays.toString(copied));
