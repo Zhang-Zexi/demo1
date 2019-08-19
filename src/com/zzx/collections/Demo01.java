@@ -26,23 +26,22 @@ public class Demo01 {
         System.out.println(Arrays.toString(empList.toArray()));// 按员工名称逆序
 
 
-
-//        System.out.println("before sort");
-//        System.out.println(Arrays.toString(empList.toArray()));
-//        Collections.sort(empList, new Comparator<Emp>() {
-//            @Override
-//            public int compare(Emp o1, Emp o2) {
-//                /*按员工编号正序排序*/
-//                return o1.getEmpno()-o2.getEmpno();
-//                /*按员工编号逆序排序*/
-//                //return o2.getEmpno()-o1.getEmpno();
-//                /*按员工姓名正序排序*/
-//                //return o1.getEname().compareTo(o2.getEname());
-//                /*按员工姓名逆序排序*/
-//                //return o2.getEname().compareTo(o1.getEname());
-//            }
-//        });
-//        System.out.println("after sort");
-//        System.out.println(Arrays.toString(empList.toArray()));
+        System.out.println("before sort");
+        System.out.println(Arrays.toString(empList.toArray()));
+        Collections.sort(empList, new Comparator<Emp>() {
+            @Override
+            public int compare(Emp o1, Emp o2) {
+                /*按员工编号正序排序*/
+                return o1.getEmpno()-o2.getEmpno();
+                /*按员工编号逆序排序*/
+                //return o2.getEmpno()-o1.getEmpno();
+                /*按员工姓名正序排序*/
+                //return o1.getEname().compareTo(o2.getEname());
+                /*按员工姓名逆序排序*/
+                //return o2.getEname().compareTo(o1.getEname());
+            }
+        });
+        System.out.println("after sort");
+        System.out.println(Arrays.toString(empList.toArray()));
     }
 }
