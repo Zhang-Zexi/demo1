@@ -12,5 +12,6 @@ public class Demo02 {
         final Cat cat1 = new Cat(1);
         cat1.setAge(1);
         System.out.println(cat1.getAge());
+        //虽然final修饰的对象无法修改引用，但是可以修改对象里的值
     }
 }
