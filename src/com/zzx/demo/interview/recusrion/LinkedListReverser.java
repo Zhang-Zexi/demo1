@@ -31,7 +31,7 @@ public class LinkedListReverser {
 //        Node.printLinkeList(reverser.reverseLinkedList(
 //                creator.createdLinkedList(new ArrayList<>())));
 //        Node.printLinkeList(reverser.reverseLinkedList(
-//                creator.createdLinkedList(Arrays.asList(1))));
+//                creator.createdLinkedList(arrays.asList(1))));
         Node.printLinkeList(reverser.reverseLinkedList(
                 creator.createdLinkedList(Arrays.asList(1, 2, 3, 4, 5))));
     }

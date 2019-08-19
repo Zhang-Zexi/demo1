@@ -22,7 +22,7 @@ public class Tester {
         Employee employee3 = new Employee("John");
         employee3.salary =10000;
 
-//        employee2 = new Manager("Mary", 400000, Arrays.asList(employee1));
+//        employee2 = new Manager("Mary", 400000, arrays.asList(employee1));
         System.out.println("employee1 == employee3 ?" + (employee1 == employee3));
         System.out.println("employee1.equals(employee3) ?" + (employee1.equals(employee3) ));
         System.out.println(employee2);

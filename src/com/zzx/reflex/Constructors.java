@@ -61,5 +61,5 @@ public class Constructors {
  *          public Constructor getDeclaredConstructor(Class… parameterTypes):获取”某个构造方法”可以是私有的，或受保护、默认、公有；
  *
  *          调用构造方法：
- *          Constructor–>newInstance(Object… initargs)
+ *          Constructor–>newInstance(object… initargs)
  */

@@ -1,4 +1,4 @@
-package com.zzx.Object;
+package com.zzx.object;
 
 /**
  * @ClassName Student

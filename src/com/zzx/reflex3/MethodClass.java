@@ -55,7 +55,7 @@ public class MethodClass {
  *      public Method getDeclaredMethod(String name,Class<?>… parameterTypes)
  *
  *   调用方法：
- *      Method –> public Object invoke(Object obj,Object… args):
+ *      Method –> public object invoke(object obj,object… args):
  *                  参数说明：
  *                  obj : 要调用方法的对象；
  *                  args:调用方式时所传递的实参；

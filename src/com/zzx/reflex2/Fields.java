@@ -57,7 +57,7 @@ public class Fields {
  *      2).public Field getDeclaredField(String fieldName):获取某个字段(可以是私有的)
  *
  *   设置字段的值：
- *      Field –> public void set(Object obj,Object value):
+ *      Field –> public void set(object obj,object value):
  *                  参数说明：
  *                  1.obj:要设置的字段所在的对象；
  *                  2.value:要为字段设置的值；

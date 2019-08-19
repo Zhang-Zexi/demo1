@@ -37,7 +37,7 @@ public class Employee {
     }
 
 //    @Override
-//    public boolean equals(Object obj) {
+//    public boolean equals(object obj) {
 //        return super.equals(obj);
 //    }
 

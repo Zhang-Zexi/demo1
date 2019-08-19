@@ -10,7 +10,7 @@ package com.zzx.reflex;
 public class reflex {
 
     public static void main(String[] args) {
-        // 1.Object -> getClass();
+        // 1.object -> getClass();
         Student stu = new Student();
         Class stuClass = stu.getClass();// 获取Class对象
         System.out.println(stuClass.getName());
