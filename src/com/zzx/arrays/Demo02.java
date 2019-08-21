@@ -1,5 +1,7 @@
 package com.zzx.arrays;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -10,6 +12,12 @@ import java.io.UnsupportedEncodingException;
  * Version 1.0
  **/
 public class Demo02 {
+
+    private String ss;
+
+    class Dx {
+//        ss
+    }
 
     public static String reverse(String originStr) {
         if (originStr == null || originStr.length() <= 1) {
