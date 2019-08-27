@@ -23,14 +23,14 @@ public class Demo {
         newList.add("周浩");
         newList.add("郭威");
 
-        List<String> arrList = getAddaListThanbList(oldList, newList);
+        Demo demo = new Demo();
+        List<String> arrList = demo.getAddaListThanbList(oldList, newList);
         oldList.removeAll(arrList);
         System.out.println(oldList);
-
     }
 
-    public static <E> List<E> getAddaListThanbList(List<E> aList, List<E> bList){
-        List<E> addList = new ArrayList<E>();
+    private List<String> getAddaListThanbList(List<String> aList, List<String> bList){
+        List<String> addList = new ArrayList<String>();
         for (int i = 0; i < aList.size(); i++){
             if(!myListContains(bList, aList.get(i))){
                 addList.add(aList.get(i));
@@ -45,14 +45,14 @@ public class Demo {
      * @param element 待判断的包含元素
      * @return 包含返回 true，不包含返回 false
      */
-    private static <E> boolean myListContains(List<E> sourceList, E element) {
+    private boolean myListContains(List<String> sourceList, String element) {
         if (sourceList == null || element == null){
             return false;
         }
         if (sourceList.isEmpty()){
             return false;
         }
-        for (E tip : sourceList){
+        for (String tip : sourceList){
             if(element.equals(tip)){
                 return true;
             }
