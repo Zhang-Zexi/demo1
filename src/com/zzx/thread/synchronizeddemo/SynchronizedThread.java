@@ -10,14 +10,14 @@ package com.zzx.thread.synchronizeddemo;
 public class SynchronizedThread {
 
     class Bank {
-        private int account = 100;
+        private volatile int account = 100;
 
         public int getAccount() {
             return account;
         }
 
         // 同步方法实现
-        public synchronized void save(int money) {
+        public void save(int money) {
             account += money;
         }
 
