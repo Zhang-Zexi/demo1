@@ -1,5 +1,8 @@
 package com.zzx.thread.synchronizeddemo;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * @ClassName SynchronizedThread
  * @Description 线程同步运用
@@ -10,15 +13,23 @@ package com.zzx.thread.synchronizeddemo;
 public class SynchronizedThread {
 
     class Bank {
-        private volatile int account = 100;
+//        private volatile int account = 100;
+        private int account = 100;
+        // 需要声明可重入锁
+        private Lock lock = new ReentrantLock();
 
         public int getAccount() {
             return account;
         }
 
-        // 同步方法实现
+        // 这里不需要synchorinzed
         public void save(int money) {
-            account += money;
+            lock.lock();// 加锁
+            try {
+                account += money;
+            } finally {
+                lock.unlock();// 释放锁
+            }
         }
 
         // 同步代码块实现
@@ -62,5 +73,4 @@ public class SynchronizedThread {
         SynchronizedThread st = new SynchronizedThread();
         st.userThread();
     }
-
 }
