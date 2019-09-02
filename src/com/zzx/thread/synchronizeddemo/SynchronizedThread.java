@@ -10,35 +10,46 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Date 2019/8/30 16:23
  * Version 1.0
  **/
+class Bank {
+    //        private volatile int account = 100;
+//    private int account = 100;
+    // 需要声明可重入锁
+//        private Lock lock = new ReentrantLock();
+    private static ThreadLocal<Integer> account = new ThreadLocal<Integer>(){
+        @Override
+        protected Integer initialValue() {
+            return 100;
+        }
+    };
+
+    public void save(int money) {
+        account.set(account.get() + money);
+    }
+
+    public int getAccount() {
+        return account.get();
+    }
+
+    // 这里不需要synchorinzed
+//    public void save(int money) {
+//        lock.lock();// 加锁
+//        try {
+//            account += money;
+//        } finally {
+//            lock.unlock();// 释放锁
+//        }
+//    }
+//
+//    // 同步代码块实现
+//    public void save1(int money) {
+//        synchronized (this) {
+//            account += money;
+//        }
+//    }
+}
 public class SynchronizedThread {
 
-    class Bank {
-//        private volatile int account = 100;
-        private int account = 100;
-        // 需要声明可重入锁
-        private Lock lock = new ReentrantLock();
 
-        public int getAccount() {
-            return account;
-        }
-
-        // 这里不需要synchorinzed
-        public void save(int money) {
-            lock.lock();// 加锁
-            try {
-                account += money;
-            } finally {
-                lock.unlock();// 释放锁
-            }
-        }
-
-        // 同步代码块实现
-        public void save1(int money) {
-            synchronized (this) {
-                account += money;
-            }
-        }
-    }
 
     class NewThread implements Runnable {
         private Bank bank;
