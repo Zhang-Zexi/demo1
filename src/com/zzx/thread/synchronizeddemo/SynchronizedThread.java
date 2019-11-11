@@ -49,8 +49,6 @@ class Bank {
 }
 public class SynchronizedThread {
 
-
-
     class NewThread implements Runnable {
         private Bank bank;
 
