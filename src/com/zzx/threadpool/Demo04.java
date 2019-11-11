@@ -37,12 +37,11 @@ public class Demo04 {
             }
         });
 
-        List<Future<String>> result = executorService.invokeAll(callables);
+        List<Future<String>> futures = executorService.invokeAll(callables);
 
-        for (Future s : result) {
-            System.out.println("result = " + s.toString());
+        for (Future<String> future : futures) {
+            System.out.println("future.get = " + future.get());
         }
-
 
         executorService.shutdown();
     }
