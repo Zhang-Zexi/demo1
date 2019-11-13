@@ -1,4 +1,4 @@
-package com.zzx.proxy;
+package com.zzx.proxystatic;
 
 public class Student implements Person {
     private String name;

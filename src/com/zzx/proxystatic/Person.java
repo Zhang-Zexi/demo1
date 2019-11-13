@@ -1,4 +1,4 @@
-package com.zzx.proxy;
+package com.zzx.proxystatic;
 
 /**
  * 创建Person接口

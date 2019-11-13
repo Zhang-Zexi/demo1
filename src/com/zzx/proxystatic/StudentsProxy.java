@@ -1,4 +1,4 @@
-package com.zzx.proxy;
+package com.zzx.proxystatic;
 
 /**
  * 学生代理类，也实现了Person接口，保存一个学生实体，这样既可以代理学生产生行为
