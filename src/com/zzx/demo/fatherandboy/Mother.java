@@ -8,4 +8,6 @@ package com.zzx.demo.fatherandboy;
  * Version 1.0
  **/
 public interface Mother {
+
+//    public String work();
 }

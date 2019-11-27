@@ -14,4 +14,9 @@ public class Daughter implements Mother{
         String result = ((Father) mother).work();
         System.out.println(result);
     }
+
+//    @Override
+//    public String work() {
+//        return null;
+//    }
 }
